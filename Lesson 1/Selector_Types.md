@@ -83,17 +83,50 @@ The third element of type < p > in a set of elements.
 - p::first-line
 The first line of the content of any < p > element. Note double ":".
 
+- p::first-letter
+THe first eltter of the content of any < p > element, as long as it is not
 
+before / after
+- h1::before {content: "Note- ";}
 
+- h1::after {content: "!";}
 
 ### Combinator
 ---
 
+#### child
+body > p
+Only targets element nested directly under another element
+
+#### adjacent / general sibling
+- h2 + p
+Any < p > element that immediately follows
+
+- h2 ~ p 
+Any < p > element
+
 ### Attribute
 ---
 
-#### Links
+#### attribute
+- a [href]
+
+#### attribute value equal to
+
+
+#### attribute value contains
+- a[href*="georgiancollege"]
+
+#### attribute value begins with
+
+#### attribute value ends with
+- a[href$=".pdf"]
+
+#### attribute value includes
+
 ---
+
+#### Links
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
