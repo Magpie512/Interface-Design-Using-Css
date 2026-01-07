@@ -37,8 +37,54 @@ A link beneath the pointer
 - a:active
 A link that is being clicked (but before the release of the button)
 
+#### Structural Pseudo-Classes
+
+##### nth-child
+
+- li:nth-child (4)
+The fourth of a set of < li > elements
+
+- li: nth-child ( 4n )
+EVERY fourth of a set of < li > elements.
+
+- li:nth-child ( 4n+1 )
+EVERY fourth of a set of < li > elements offset by one.
+
+- li-nth-child(odd)
+EVERY odd of a set of < li > elements.
+
+##### nth-of-type
+- p:nth-of-type(3)
+The third element of type < p > in a set of elements.
+
+(Essentially the same syntax Idea as the section above)
+
+##### first-child/last-child
+
+##### first-of-type/last-of-type
+
+##### only-child
+- h2:only-child
+
+##### only-of-type
+
+##### empty
+- td:empty
+
+#### Negation Psuedo-Class
+##### not
+- *:not (a)
+
 ### Psuedo-Element
 ---
+(Psudeo-Elements use TWO colons)
+
+#### first-line / first-letter
+- p::first-line
+The first line of the content of any < p > element. Note double ":".
+
+
+
 
 ### Combinator
 ---
