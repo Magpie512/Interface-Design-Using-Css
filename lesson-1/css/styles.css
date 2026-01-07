@@ -5,8 +5,8 @@ body {
 }
 
 h1 {
+    font-family: 'Georgia', serif;
     color: #3d2817;
-    font-family: 'Arial', sans-serif;
     text-align: center;
     margin-top: 20px;
 }
