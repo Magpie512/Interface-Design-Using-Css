@@ -10,7 +10,7 @@ html {
 	line-height: 1.4; /* "unitless (factor)" value is best practice */
 
 	/* STEP 4: Set base font-family (font stack) */
-	font-family: 'Courier New', Courier, monospace;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	
 	background: #111;
 	/* STEP 10a: set the background image */
@@ -26,7 +26,7 @@ html {
 h1 {
 	font-size:4.8rem;
 	/* STEP 7a: Set primary heading font - use "Alfa Slab One" from Google Fonts - place the appropriate @import at the top of this CSS file, then set the font-family to the same, with a fallback to "Rockwell" - then set font-weight to normal (we don't need to bold these fonts) */
-	.alfa-slab-one-regular {
+.alfa-slab-one-regular {
   font-family: "Alfa Slab One", serif;
   font-weight: 400;
   font-style: normal;
@@ -72,7 +72,6 @@ p {
 }
 /* STEP 7d: Set font for p in header to the same as the h2 and the h3 elements, using a descendant (contextual) selector */
 header p {
-	font-family: "Century Gothic", Futura, sans-serif;
 	font-weight: normal
 	
 }
@@ -98,16 +97,20 @@ section h3 {
 section p {
 	
 	/* STEP 12a: Measure is 85+ - too long - bump up the font size */
-	
+	font-size: 1.2rem;
 	/* STEP 12b: Play with the leading (line-height) - raise to 1.8, then reduce to 1.2 - discuss typographic color and vertical rhythm */
-	
+	line-height:1.4rem;
 	/* STEP 14a: Justification with text-align - left, right, center, justify */
-	
+	text-align: justify;
 	/* STEP 14b: Hyphenation - change BODY width to 50% down below, then resize the window width in your browser to see the effect */
-	
+	hyphens: auto;
 	/* STEP 16a: Play with some non-standard CSS properties like text-rendering - this can enable things like ligatures - look at the combination of letters f and i */
-	
+	text-rendering: optimizeLegibility;
+
+
 	/* STEP 16b: Change the font to Calibri, then watch the 'fi' and 'fl' combination render as a ligature - for some reason, 'ff' does not for this font */
+
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 	
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering */
 }
@@ -115,28 +118,31 @@ section p {
 body {
 	
 	/* STEP 14c: Change width of BODY to see how hyphenation works - then comment out */
-	/*min-width: 480px;
-	max-width: 720vh;
+	min-width: 480px;
+	max-width: 720px;
 	margin-left: auto;
-	margin-right: auto;*/;
+	margin-right: auto;
+	/*width:50%;*/
 	
 	background: #eee;
 }
 header {
 	background: #5C8096;
 	/* STEP 11a: Add whitespace - very important */
-	
+	padding: 3rem;
 	/* STEP 15: Inset text effect with text shadow */
-	text-decoration: drop-shadow(1px 1px 2px #000);
+	text-shadow: 0 1px 1px #A2C0CF;
 }
 section {
 	/* STEP 11b: Add more whitespace */
+	padding: 0 2rem;
 	
 }
 footer {
 	background: #333;
 	color: #eee;
 	/* STEP 11c. Add even more whitespace */
+	padding: 2rem 3.4rem;
 	
 }
 footer h3 {
