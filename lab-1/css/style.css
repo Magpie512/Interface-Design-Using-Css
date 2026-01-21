@@ -1,0 +1,50 @@
+html{
+  font-family: "Xanh Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#page{
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+header{
+    text-transform: uppercase;
+}
+
+header h1{
+    display: inline;
+    border: 2px solid black;
+    padding: 0.1rem;
+    font-size: 20px;
+}
+
+header h2, p{
+    text-align: center;
+}
+
+header p {
+    font-weight:bold;
+    word-spacing: 5px;
+}
+
+main {
+    columns: 3;
+}
+
+h4{
+
+    font-weight: bold;
+}
+
+main p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: justify;
+    hyphens: auto;
+    text-rendering: optimizeLegibility;
+    word-spacing: 0.1em;
+    
+}
