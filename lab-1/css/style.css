@@ -45,6 +45,5 @@ main p {
     text-align: justify;
     hyphens: auto;
     text-rendering: optimizeLegibility;
-    word-spacing: 0.1em;
-    
+    margin-bottom: 1rem;
 }
