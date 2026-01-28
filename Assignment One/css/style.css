@@ -33,26 +33,7 @@ main {
     flex-direction: row;
     justify-content: space-around;
     padding: 2%;
-    align-items: stretch;
-    background: #863a3a;
-}
-
-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 2%;
-    align-items: stretch;
-    background: #863a3a;
-}
-
-aside {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 2%;
-    align-items: stretch;
-    background: #863a3a;
+    background: #863a3a;;
 }
 
 footer {
