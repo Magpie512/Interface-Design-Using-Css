@@ -6,3 +6,8 @@ html {
     outline: 2px solid black;
     box-sizing: inherit;
 }
+
+body { /*Wanna have it be the same as spotfy*/
+    background: #aa0707d1;
+    
+    }
