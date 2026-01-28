@@ -1,13 +1,64 @@
 html {
     box-sizing: border-box;
+
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-* { 
+* {
     outline: 2px solid black;
     box-sizing: inherit;
+    color: rgb(231, 217, 217);
 }
 
-body { /*Wanna have it be the same as spotfy*/
+body {
+    /*Wanna have it be the same as spotfy*/
     background: #aa0707d1;
-    
-    }
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #d90a0a;
+    text-align: center;
+    padding: 2%;
+    font-size: 150%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+    align-items: stretch;
+    background: #863a3a;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+    align-items: stretch;
+    background: #863a3a;
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+    align-items: stretch;
+    background: #863a3a;
+}
+
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 2%;
+    font-size: 14px;
+}
