@@ -32,6 +32,7 @@ body {
 }
 
 header {
+    border-bottom: 3px solid black
     background: #d90a0a;
     text-align: center;
     font-size: 150%;
@@ -89,6 +90,7 @@ main > div:nth-of-type(2) > section {
 }
 
 footer {
+    border-top: 3px solid black;
     background: var(--footer-bg-color);
     clear: both;
     text-align: center;
@@ -135,7 +137,6 @@ section {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 1em;
     box-sizing: border-box;
 }
 
@@ -146,16 +147,17 @@ main > div > section {
 
 h2 {
     margin: 0 0 0.5em 0;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 h3 {
     margin: 0 0 0.5em 0;
-    line-height: 1.4;
+    line-height: 1;
 }
 
 p {
     margin: 0.5em 0;
-    line-height: 1.8;
+    line-height: 1;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
