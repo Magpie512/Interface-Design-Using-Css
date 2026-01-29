@@ -1,3 +1,9 @@
+::root {
+    --header-bg-color: #5e5656;
+    --footer-bg-color: #5e5656;
+    --font-color: rgb(231, 217, 217);
+}
+
 html {
     box-sizing: border-box;
 
@@ -8,7 +14,7 @@ html {
 }
 
 * {
-    outline: 2px solid black;
+    /*outline: 2px solid black; */
     box-sizing: inherit;
     color: rgb(231, 217, 217);
 }
@@ -22,6 +28,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     width: 100vw;
+    padding: 
 }
 
 header {
@@ -63,6 +70,7 @@ main > div {
     gap: 1%;
     align-items: center;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 main > div:nth-of-type(2) {
@@ -81,6 +89,7 @@ main > div:nth-of-type(2) > section {
 }
 
 footer {
+    background: var(--footer-bg-color);
     clear: both;
     text-align: center;
     padding: 2%;
