@@ -7,4 +7,4 @@
 [Lab One]()
 
 ## Assignments https://magpie512.github.io/Interface-Design-Using-Css/lab-1/index.html
-[Assignment One](https://magpie512.github.io/Interface-Design-Using-Css/Assignment-One/index.html)
+[Assignment One](https://magpie512.github.io/Interface-Design-Using-Css/Assignment%20One/index.html)
