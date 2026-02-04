@@ -5,6 +5,7 @@
 
 ## Labs
 [Lab One](https://magpie512.github.io/Interface-Design-Using-Css/lab-1/index.html)
+<br/>
 [Lab Two](https://magpie512.github.io/Interface-Design-Using-Css/lab-2/index.html)
 
 ## Assignments 
