@@ -1,18 +1,20 @@
 # CSS Color Guide
 
+Concise reference for common CSS color models, syntax, and practical usage.
+
 ## Color Models
 
 ### Subtractive Color (Printing)
-Used in inkjet printers and physical media:
+Used in inkjet printers and physical media (CMYK):
 - **Yellow**
 - **Magenta**
 - **Cyan**
 - **Key (Black)**
 
-![Color model comparison diagram](image-1.png)
+![CMYK vs RGB comparison](image-1.png)
 
 ### Additive Color (Digital)
-Used in digital displays and web applications:
+Used in digital displays and web applications (RGB):
 - **Red**
 - **Green**
 - **Blue**
@@ -20,7 +22,7 @@ Used in digital displays and web applications:
 ## CSS Color Syntax Notations
 
 ### RGB(A) - Red, Green, Blue (Alpha)
-Apply the RGB(A) CSS color syntax/notation to specify colors using red, green, and blue values.
+Use RGB(A) to specify colors with red, green, and blue values plus optional transparency.
 
 ![RGB color model example](image-3.png)
 ![RGB color implementation in CSS](image-4.png)
@@ -28,19 +30,22 @@ Apply the RGB(A) CSS color syntax/notation to specify colors using red, green, a
 **Usage:** `rgb(255, 0, 0)` or `rgba(255, 0, 0, 0.5)`
 
 ### HSL(A) - Hue, Saturation, Lightness (Alpha)
-Apply the HSL(A) color syntax/notation for intuitive color selection based on hue, saturation, and lightness.
+Use HSL(A) for intuitive color selection based on hue, saturation, and lightness plus optional transparency.
 
 ![HSL color model example](image-5.png)
 ![HSL color implementation in CSS](image-6.png)
 
+#### HSL(A) 3D Diagram
+![HSL 3D diagram](image-7.png)
+
 **Usage:** `hsl(0, 100%, 50%)` or `hsla(0, 100%, 50%, 0.5)`
 
 ### Hexadecimal Color Notation
-Apply hexadecimal color syntax/notation as shorthand for RGB values.
+Hexadecimal is a compact RGB representation. Use 3 or 6 hex digits (with optional alpha).
 
 ![Hexadecimal color values reference](image-2.png)
 
-**Usage:** `#FF0000` or `#F00`
+**Usage:** `#FF0000`, `#F00`, `#FF000080` (with alpha)
 
 ### Other CSS Color Syntax Notations
 - Named colors: `red`, `blue`, `transparent`
@@ -51,26 +56,26 @@ Apply hexadecimal color syntax/notation as shorthand for RGB values.
 
 ### Alpha vs Opacity
 
-Demonstrate the key differences between CSS alpha and CSS opacity:
+Key differences between alpha in color values and element `opacity`:
 
 | Property | Definition | Inheritance | Performance |
 |----------|-----------|-------------|-------------|
-| **Alpha** | Affects only that element | Not inherited | Lighter rendering |
-| **Opacity** | Affects element and all children | Inherited by children | Heavier rendering |
+| **Alpha** | Affects only that property | Not inherited | More targeted control |
+| **Opacity** | Affects element and all children | Inherited by children | Can reduce text clarity |
 
 ## Gamuts, Color Spaces, and Web Standards
 
-Describe gamuts, color spaces and Web color standards:
+Summary of display limits and terminology:
 
-- **Gamut**: The range of colors that can be displayed by a device
+- **Gamut**: The range of colors a device can display
 - **Color Space**: A model for representing colors (RGB, HSL, CMYK, etc.)
-- **Web Standards**: Colors supported across all modern browsers
+- **Web Standards**: Colors supported across modern browsers
 
-![Color gamut visualization diagram](image.png)
+![Color gamut visualization](image.png)
 
 ## Applying Color to HTML Elements
 
-Using CSS to apply color properties to HTML elements:
+Common CSS properties that accept colors:
 
 ```css
 /* Text color */
@@ -85,3 +90,18 @@ border-color: hsla(200, 100%, 50%, 0.8);
 /* Box shadow with color */
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 ```
+
+### Opacity in CSS
+
+Use `opacity` to affect the entire element, or alpha in a color value to affect a single property.
+
+```css
+/* Entire element becomes semi-transparent */
+opacity: 0.5;
+
+/* Only the background is semi-transparent */
+background-color: rgba(0, 0, 0, 0.5);
+```
+
+![Opacity example](image-8.png)
+![Alpha vs opacity comparison](image-9.png)
