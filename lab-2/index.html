@@ -13,23 +13,35 @@ to match as closely as you can with the colors
 on the FIRST paint swatch card provided.
 -------------------------------------------------- */
 	#hex div:nth-of-type(1) {
-		background-color: red;
+		background-color: #b3b2fb;
 	}
 	#hex div:nth-of-type(2) {
-		background-color: orange;
+		background-color: #b9c4ef;
+		color: rgb(38, 60, 81);
 	}
 	#hex div:nth-of-type(3) {
-		background-color: yellow;
+		background-color: #949ed3;
 	}
 	#hex div:nth-of-type(4) {
-		background-color: limegreen;
+		background-color: #6f71a8;
 	}
 /* STEP 2: Set each color in rgba format
 to match as closely as you can with the colors
 on the SECOND paint swatch card provided.
 -------------------------------------------------- */
 	#rgba div:nth-of-type(1) {
-		background-color: red;
+		background-color: rgb(240, 141, 214);
+	}
+	#rgba div:nth-of-type(2) {
+		background-color: rgb(246, 226, 244);
+		color: rgb(169, 74, 74);
+	}
+	#rgba div:nth-of-type(3) {
+		background-color: rgb(247, 199, 237);
+		color: rgb(169, 74, 74);
+	}
+	#rgba div:nth-of-type(4) {
+		background-color: rgb(226, 22, 179);
 	}
 	/* ...and so on... */
 
@@ -38,8 +50,22 @@ to match as closely as you can with the colors
 on the THIRD paint swatch card provided.
 -------------------------------------------------- */
 	#hsla div:nth-of-type(1) {
-		background-color: red;
+		background-color: hsl(35, 71%, 62%);
 	}
+	#hsla div:nth-of-type(2) {
+		background-color: hsl(41, 60%, 71%);
+		color: rgb(81, 56, 36);
+	}
+	#hsla div:nth-of-type(3) {
+		background-color:hsl(41, 60%, 71%);
+		color: rgb(81, 56, 36);
+	}
+	#hsla div:nth-of-type(4) {
+		background-color: hsl(41, 60%, 71%);
+		color: rgb(81, 56, 36);
+	
+	}
+	
 	/* ...and so on... */
 
 	/* STEP 4: Set each color using a CSS color keywords
@@ -50,10 +76,42 @@ produce an exact rendition of the swatch colors on the FOURTH card provided.
 (https://developer.mozilla.org/en-US/docs/Web/CSS/filter).
 -------------------------------------------------- */
 	#keyword div:nth-of-type(1) {
-		background-color: red;
+		background-color: #8b008b;
+		/* color: #883f90; */
+		/* darkpurple in color keywords */
 	}
+	#keyword div:nth-of-type(2) {
+		background-color: #ba55d3;
+		/* color: #9c5bad; */
+		/* mediumpurple in color keywords */
+	}
+	#keyword div:nth-of-type(3) {
+		background-color: plum;
+		/* filter: brightness(0) saturate(100%) invert(87%) sepia(95%) saturate(4937%) hue-rotate(192deg) brightness(87%) contrast(93%); */
+		
+	}
+	#keyword div:nth-of-type(4) {
+		background-color: thistle;
+		/* filter: brightness(0) saturate(100%) invert(98%) sepia(70%) saturate(4204%) hue-rotate(186deg) brightness(92%) contrast(83%); */
+	}
+
+	#keyword div:nth-of-type(4) h3, #keyword div:nth-of-type(4) p {
+		filter:none;
+		color: black;
+	}
+
 	/* ...and so on... */
 
+	header h2{
+		font-weight: normal;
+		font-size: 1.5rem;
+	}
+
+	p{
+		font-size: 0.9rem;
+		font-style: italic;
+		margin: 0 0 1rem 0;
+	}
 	/* STEP 5: Describe one or more things that you can do to ensure that the colour rendering on your screen is exactly the same (or as close as possible) to the colours on your paint chip cards. If possible, attempt to do one or more of these things and describe what you did and what you found out. Maybe a screenshot, too if it might help. */
 </style>
 </head>
@@ -61,66 +119,83 @@ produce an exact rendition of the swatch colors on the FOURTH card provided.
 <body>
 	<header>
 		<h1>Specifying Color <em>with</em> <abbr title="Red, Green, Blue, Alpha">RGBa</abbr>, <abbr title="Hue, Saturation, Luminousity, Alpha">HSLa</abbr>, Hexadecimal, <em>and</em> CSS Filters</h1>
+		<h2> Justine, Melika, Mars</h2>
 	</header>
 	<main>
 		<section id="hex">
-			<h2>Hexadecimal</h2>
+			<h2>Hexadecimal | Melika</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Parma Violet | Violette de Parme</h3>
+				<p>PR22N29-1</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Violet Cream | Creme de Violet</h3>
+				<p>PR22N29-2</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				 <h3>Smoky Violet | Violet Fumeux</h3>
+				 <p>PR22N29-3</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Violet Shadow | Ombre de Violet</h3>
+				<p>PR22N29-4</p>
 			</div>
 		</section>
 		<section id="rgba">
-			<h2>RGB(A)</h2>
+			<h2>RGB(A) | Justine</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Candy Fluff | Friandise Sucree</h3>
+				<p>PR20c14-1</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Rosewater | Eau de Rose</h3>
+				<p>PR20c14-2</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Candy Necklace | Collier de Friandises</h3>
+				<p>PR20c14-3</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Tropical Rose | Rose Tropicale</h3>
+				<p>PR20c14-4</p>
 			</div>
 		</section>
 		<section id="hsla">
-			<h2>HSL(A)</h2>
+			<h2>HSL(A) | Mars</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Energize it | Regain d'energie</h3>
+				<p>G2Y 55/518 A</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Pale Orange | Orange Pâle</h3>
+				<p>17YY 65/420 M</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Ginger Peachy | Rousse</h3>
+				<p>22YY 71/347 M</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>First Light | Lueur Matinale</h3>
+				<p>39YY 85/156 W/B</p>
 			</div>
 		</section>
 		<section id="keyword">
 			<h2>Keyword / CSS Filter</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Vibrato | Vibrato | Melika</h3>
+				<p>10Rr 25/437 A</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Exotic Pink | Rose exotique | Melika</h3>
+				<p>02RR 35/376 M</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Pink Angora | Rose angora | Justine</h3>
+				<p>95RB 64/182 W/B</p>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Sorbet | Sorbet | Mars</h3>
+				<p>94RB 64/182 W/B</p>
 			</div>
 		</section>
 	</main>
