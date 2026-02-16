@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8" />
 	<title>CSS Triangles</title>
@@ -23,6 +24,7 @@
 			position: relative;
 
 		}
+
 		/* STEP 2: Generate CSS pseudo-element to function as the triangle that will be affixed to the above shape */
 		div.callout::before {
 			/* STEP 3: Generate an element with no content, and zero height and width */
@@ -41,20 +43,21 @@
 			bottom: 100px;
 			/* STEP 7: Set the border-top-color to #333 */
 			border-right-color: #333;
-			
-			/* STEP 8: Revisit STEP 4 above, and set the other 3 borders to color transparent */
-			 border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
-			 /* STEP 9: Adjust the border-width and left and bottom properties to position the triangle as desired */
-			 border-width: 25px;
-			 left: -50px;
-			 bottom: 100px;
-		}
 
+			/* STEP 8: Revisit STEP 4 above, and set the other 3 borders to color transparent */
+			border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
+			/* STEP 9: Adjust the border-width and left and bottom properties to position the triangle as desired */
+			border-width: 25px;
+			left: -50px;
+			bottom: 100px;
+		}
 	</style>
 </head>
+
 <body>
 	<div class="callout">
 		<p>This is a CSS callout.</p>
 	</div>
 </body>
+
 </html>
