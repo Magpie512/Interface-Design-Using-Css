@@ -38,3 +38,4 @@ Please refer to the attached assessment rubric. You will be graded on how well y
 https://en.wikipedia.org/wiki/International_Women's_Day
 https://www.goodreads.com/book/show/825880.Chicken_Soup_for_the_Woman_s_Soul
 https://www.womansday.com/
+https://www.hearst.com/magazines/womans-day

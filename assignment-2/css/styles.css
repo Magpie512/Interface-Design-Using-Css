@@ -1,9 +1,7 @@
 :root {
-    --primary-color: #72cfe2;
-    --secondary-color: #cb5cd1;
-    --background-color: #eba8a8;
+    --title-color: rgb(255, 142, 56);
+    --background-color: #fbffdd;
     --text-color: #333333;
-    --sunshine-yellow: #f9e79f; /* Thanks Alex*/
 }
 
 *,
@@ -12,17 +10,62 @@
     box-sizing: border-box;
 }
 
+/* Header styles */
+
 header {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
     margin: 0;
     padding: 1em;
-}
-
-header h1 {
-    font-size: 2.5em;
-    color: var(--text-color);
-}
-
-body {
-    color: var(--text-color);
     background-color: var(--background-color);
+}
+
+/* WD Content */
+h1 {
+    font-size: 2.5em;
+    color: var(--title-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -1px -1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Date */
+header p {
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Main content */
+main{
+    columns:2;
+    column-gap: 2em;
+}
+
+section h2 {
+    text-transform: lowercase;
+}
+
+/* Section 1*/
+section:nth-of-type(1){
+    border-top: 10px solid rgb(101, 189, 101);
+}
+
+/* Image */
+    aside:first-of-type {
+    border-color: var(--title-color);
+    filter: drop-shadow(5px 5px 10px rgba(255, 142, 56, 0.5));
+    float: left;
+}
+
+/* On Our Cover */
+aside:last-of-type {
+    border: 2px solid var(--title-color);
+    filter: drop-shadow(5px 5px 10px rgba(255, 142, 56, 0.5));
+}
+
+/* Footer */
+footer {
+    text-align:right;
+}
+
+footer em{
+    color: rgb(255, 111, 0);
 }
