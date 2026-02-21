@@ -7,7 +7,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 /* Header styles */
@@ -31,6 +31,10 @@ h1 {
 
 /* Date */
 header p {
+    float:left;
+    position: absolute;
+    top:0;
+
     color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
     padding: 0;
@@ -40,14 +44,22 @@ header p {
 /* Main content */
 main {
     position: relative;
-    padding: 2em;
+    padding: 2em 2em 2em 24em;
 }
 
 main ol{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+li {
+    line-height: 1.4;
+}
 
+section {
+    line-height: normal;
+    padding: 1em;
+    margin: 0;
+}
 
 section h2 {
     text-transform: lowercase;
@@ -68,7 +80,6 @@ section:nth-of-type(2) {
 section:nth-of-type(3) {
     border-top: 15px solid rgb(57, 159, 214);
 }
-
 
 /* Section Info */
 main ol:nth-of-type(1) li h3 {
@@ -97,7 +108,9 @@ main ol:nth-of-type(3) li h3 {
 }
 
 main ol li p {
-    display: inline-flex;
+    display: inline;
+    hyphens: auto;
+    margin: 0;
 }
 
 /* List mods | AI assistance. Theres a robo meet today the 21st so I cant get help rn*/
@@ -105,25 +118,96 @@ ol li::marker {
     content: counter(list-item) " ";
 }
 
-/* Image */ /*
+/* Image */ 
 aside:nth-of-type(1) {
-    float:left;
     position: absolute;
-    top: 0;
-    left:0;
-    
+    top: 2em;
+    left: 1em;
+    width: 21em;
 }
 
-/* On Our Cover *//*
+aside:nth-of-type(1) figure {
+    margin: 0;
+    position: relative;
+}
+
+aside:nth-of-type(1) img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+aside:nth-of-type(1) figcaption {
+    position: absolute;
+    left: 0.8em;
+    bottom: 0.8em;
+    color: #fff;
+}
+
+aside:nth-of-type(1) figcaption p {
+    margin: 0;
+    line-height: 1.1;
+}
+
+aside:nth-of-type(1) figcaption em {
+    font-size: 4rem;
+    font-style: normal;
+}
+
+/* On Our Cover */
+
+/* Had to ref my trollpost project */
+aside:nth-of-type(2)::before {
+    content: "";
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
 aside:nth-of-type(2) {
-    float:left;
-    padding:10px;
-    border: 2px solid var(--title-color);
-    filter: drop-shadow(5px 5px 10px rgba(255, 142, 56, 0.5));
+    font-size: .8rem;
+    position: absolute;
+    top: 32em;
+    left: 1em;
+    width: 20em;
+    margin-left:2%;
+    padding: 0.75em;
+    border: 2px solid orange;
+    background-color: #fff;
+    font-weight:bold;
+}
+
+aside:nth-of-type(2) h2{
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: lowercase;
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+aside:nth-of-type(2) p {
+    margin: 0;
+}
+
+aside:nth-of-type(2) em {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+}
+
+aside:nth-of-type(2) ol {
+    margin: 0.5em 0 0;
+    padding-left: 1.5em;
+}
+
+aside:nth-of-type(2) li {
+    line-height: 1.25; /* 1.25 it is */
 }
 
 /* Footer */
 footer {
+    margin: 0;
+    padding: 0;
     text-align: right;
 }
 
