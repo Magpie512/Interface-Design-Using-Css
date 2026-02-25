@@ -12,5 +12,5 @@
 [Assignment One](https://magpie512.github.io/Interface-Design-Using-Css/Assignment%20One/index.html)
 Try It out in mobile. I did some media-queries(querys? what? infinite medal!!)
 
-[Assignment Two](https://magpie512.github.io/Interface-Design-Using-Css/Assignment-2/womans-day.html)
+[Assignment Two](https://magpie512.github.io/Interface-Design-Using-Css/assignment-2/womans-day.html)
 Beep
