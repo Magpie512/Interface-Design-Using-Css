@@ -19,9 +19,10 @@
 			/* STEP 1: Set a background-color as a fallback */
 			background-color: antiquewhite;
 			/* STEP 2: Layer the background-images with a comma-separated list - images listed first appear higher in the rendered stacking order */
-			background-image: url("img/ground.png"), url("img/starry-sky.png"), url("img/ufo-colored.png");
+			background-image: url("img/ground.png"), url("img/flying-saucer.png"), url("img/starry-sky.png");
 			/* STEP 3: Position each image respectively */
-			background-position: center bottom, center top, 50px 50px;
+			background-position: bottom center, center top, center center;
+			/* The first value corresponds to the first image, the second value to the second image, and so on */
 			/* STEP 4: Set the background-repeat respectively for each image as well */
 			background-repeat: no-repeat, no-repeat, no-repeat;
 
@@ -32,7 +33,7 @@
 		}
 		/* Learn more about CSS background properties at https://developer.mozilla.org/en-US/docs/Web/CSS/background */
 		/* Image credits:
-		UFO - colored: https://openclipart.org/detail/213751/ufo-coloured
+		Flying Saucer: https://openclipart.org/detail/213751/ufo-coloured
 		Starry Sky With Milky Way: https://openclipart.org/detail/248387/starry-sky-with-milky-way
 		Ilmenskie Ground 2: https://openclipart.org/detail/209961/ilmenskie-ground-2
 		*/

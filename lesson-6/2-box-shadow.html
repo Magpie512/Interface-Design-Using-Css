@@ -23,7 +23,9 @@
 		}
 		/* STEP 1: Simple box shadow - x-offset y-offset blur-radius color */
 		.shadow {
-			box-shadow: 10px 10px 5px rgba(0,0,0,0.5);;
+			box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+			/* the first 10px is the horizontal offset, the second 10px is the vertical offset, the 5px is the blur radius, and the rgba value is the color of the shadow with an alpha value for opacity */
+
 		}
 		/* STEP 2: Box shadow with negative offsets and blur */
 		.shadow-negative {
@@ -32,6 +34,7 @@
 		/* STEP 3: Box shadow with offsets, blur, and shadow-spread value as well */
 		.shadow-spread {
 			box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.5);
+			 /* the 5px after the blur radius is the shadow spread value, which controls how much the shadow grows in all directions */
 
 		}
 		/* STEP 4: Box shadow with no offsets, blur and shadow-spread */
@@ -42,7 +45,7 @@
 		/* STEP 5: Inset box shadow with keyword 'inset' at the end of the values */
 		.inset-shadow {
 			box-shadow: inset 10px 10px 5px rgba(0,0,0,0.5);
-			
+			/* the 'inset' keyword changes the shadow from an outer shadow to an inner shadow, which makes it look like the element is pressed into the page instead of floating above it */
 		}
 		/* STEP 6: Create multiple box shadows with comma-separated lists of values */
 		.multiple {

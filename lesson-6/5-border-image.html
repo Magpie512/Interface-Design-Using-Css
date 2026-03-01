@@ -32,6 +32,9 @@
 
 		div {
 			margin: 1em auto;
+			/* em is a relative unit that is based on the font size of the element. In this case, it will be based on the font size of the body element, which is inherited by the div. So if the font size of the body is 16px, then 1em will be equal to 16px. This allows for more flexible and scalable layouts, as the spacing will adjust based on the font size of the element. */
+
+			/* rem is also a relative unit, but it is based on the font size of the root element (html) instead of the current element. So if the font size of the html element is 16px, then 1rem will be equal to 16px regardless of the font size of the body or any other element. This can be useful for creating consistent spacing across an entire page, as it will not be affected by changes in font size at different levels of the document. */
 		}
 
 		div h1 {
