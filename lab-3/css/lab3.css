@@ -5,14 +5,92 @@
 html {
 	box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
 html {
 	font-family: "Open Sans", sans-serif;
 }
+
 #container {
 	width: 80%;
 	margin: 0 auto;
+}
+
+li {
+	border-radius: 2px;
+}
+
+div ul {
+	/* border: 3px solid deeppink; */
+	/* STEP 2: Get rid of the list markers */
+	list-style-type: none;
+	/* STEP 3: Set the UL to display: flex */
+	display: flex;
+	/* STEP 4: Remove margin and padding on UL */
+	margin: 0;
+	padding: 0;
+	/* STEP 5: Center content inside the UL with justify-content: center; */
+	justify-content: center;
+	/* STEP 6: Experiment with distributing the children of the UL differently (flex-start | flex-end | center | space-between | space-around) – be sure to play with the width of the browser window to observe the behavior */
+
+	/* Learn more about justify-content at https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6 */
+}
+
+div li {
+	/* border: 3px solid lawngreen; */
+	margin-right: 0.5em;
+}
+
+div li a {
+	/* border: 3px solid lightblue; */
+	/* Render anchor elements as boxes */
+	display: block;
+	padding: 0.5em;
+	background: #ccc;
+	/* Style the text for the links */
+	text-decoration: none;
+	color: #000;
+}
+
+div li a:hover {
+	background: #fff;
+}
+
+div {
+	background-color: bisque;
+	padding: 5px;
+	border-radius: 1rem;
+}
+
+div>div {
+	background-color: azure;
+	background-color: azure;
+}
+
+li:active {
+	background-color: #fff;
+	color: #000;
+}
+
+#tabpanel1,
+#tabpanel2,
+#tabpanel3 {
+	display: none;
+}
+
+#tabpanel1:target,
+#tabpanel2:target,
+#tabpanel3:target {
+	display: block;
+}
+
+#tabpanel1:target~#tabpanel1,
+#tabpanel2:target~#tabpanel2,
+#tabpanel3:target~#tabpanel3 {
+	display: block;
 }
