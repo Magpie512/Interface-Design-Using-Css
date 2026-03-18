@@ -62,7 +62,6 @@ div li a:hover {
 }
 
 div {
-	background-color: bisque;
 	padding: 5px;
 	border-radius: 1rem;
 }
@@ -86,11 +85,5 @@ li:active {
 #tabpanel1:target,
 #tabpanel2:target,
 #tabpanel3:target {
-	display: block;
-}
-
-#tabpanel1:target~#tabpanel1,
-#tabpanel2:target~#tabpanel2,
-#tabpanel3:target~#tabpanel3 {
 	display: block;
 }
