@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Module 11 - Forms | COMP1054 Web User Interface Design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- STEP 1: Attach the Bootstrap CSS and JS via a Content Distribution Network (CDN) (https:getbootstrap.com/) -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+	<style>
+		body {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		div {
+			margin: 15px 0;
+		}
+
+		.btn {
+			background-color: #007bff;
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			margin: 5px 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>Designing Forms</h1>
+
+	<!-- STEP 2: To leverage the Bootstrap form control styles, add the form-control class to the following input elements: text, search, email, url, tel, password, number, date (Bootstrap applies display: block and width: 100%) - adjust width of FORM element to see -->
+	<!-- STEP 3: Add suitable labels for each of the above form inputs -->
+	<!-- STEP 4: Surround each label and input with a sectioning element (DIV is fine in this case), observing how Bootstrap visually groups the pair with a margin-bottom -->
+
+	<div class="mb-3">
+		<label for="input" class="form-label">Input</label>
+		<input id="input" class="form-control" type="text" placeholder="Input">
+	</div>
+
+	<div class="mb-3">
+		<label for="search" class="form-label">Search</label>
+		<input id="search" class="form-control" type="search" placeholder="Search">
+	</div>
+
+	<div class="mb-3">
+		<label for="email" class="form-label">Email</label>
+		<input id="email" class="form-control" type="email" placeholder="Email">
+	</div>
+
+	<div class="mb-3">
+		<label for="url" class="form-label">URL</label>
+		<input id="url" class="form-control" type="url" placeholder="URL">
+	</div>
+
+	<div class="mb-3">
+		<label for="tel" class="form-label">Telephone</label>
+		<input id="tel" class="form-control" type="tel" placeholder="Telephone">
+	</div>
+
+	<div class="mb-3">
+		<label for="password" class="form-label">Password</label>
+		<input id="password" class="form-control" type="password" placeholder="Password">
+	</div>
+
+	<div class="mb-3">
+		<label for="phone2" class="form-label">Phone Number</label>
+		<input id="phone2" class="form-control" type="tel" placeholder="Enter your phone number">
+	</div>
+
+	<div class="mb-3">
+		<label for="date" class="form-label">Date</label>
+		<input id="date" class="form-control" type="date">
+	</div>
+
+	<!-- STEP 5: Contruct an inline form consisting of a username, password, "Remember me" checkbox, and submit button - Add a class form-inline to the FORM element  -->
+	<div class="form-control p-3">
+		<form class="row row-cols-lg-auto g-3 align-items-center">
+			<h1>Inline Form</h1>
+
+			<input class="form-control" type="text" placeholder="Username">
+			<input class="form-control" type="password" placeholder="Password">
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="remember">
+				<label class="form-check-label" for="remember">Remember me</label>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<!-- STEP 6: Style the buttons consistently across platforms with the class "btn", and if it is the primary submit button, then add another class, "btn-primary" -->
+
+	<!-- STEP 7: Make checkboxes and radio buttons look and behave consistently across platforms with "custom-control" classes -->
+	<!-- (Bootstrap 5 uses form-check instead of custom-control) -->
+
+	<form>
+
+		<!-- STEP 8: Add the class="custom-control-inline" to the custom-control DIV elements above to arrange the radio buttons horizontally - the default is vertically stacked -->
+		<!-- (Bootstrap 5 equivalent: form-check-inline) -->
+
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="radio" name="radio" id="radio1">
+			<label class="form-check-label" for="radio1">Option 1</label>
+		</div>
+
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="radio" name="radio" id="radio2">
+			<label class="form-check-label" for="radio2">Option 2</label>
+		</div>
+
+		<!-- STEP 9: Custom styles for SELECT elements entails adding a "custom-select" class to the start tag -->
+		<!-- (Bootstrap 5 equivalent: form-select) -->
+		<select class="form-select my-3">
+			<option selected>Select an option</option>
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
+
+		<!-- STEP 10: Size controls by adding a class, either "form-control-lg" or "form-control-sm" -->
+		<!-- STEP 11: Add a bit of space between the above form inputs with class mb-2 (or whatever number you wish) -->
+		<input class="form-control form-control-lg mb-2" type="text" placeholder="Large">
+		<input class="form-control mb-2" type="text" placeholder="Default">
+		<input class="form-control form-control-sm mb-2" type="text" placeholder="Small">
+
+		<button type="submit" class="btn btn-outline-primary">Submit</button>
+
+		<!-- STEP 12a: Try changing the above button - the btn-* classes are - primary, secondary, success, danger, warning, info, light, dark, link -->
+		<!-- STEP 12b: Perhaps the button is a bit overwhelming? Modify the above with btn-outline-* -->
+
+	</form>
+
+</body>
+
+</html>
