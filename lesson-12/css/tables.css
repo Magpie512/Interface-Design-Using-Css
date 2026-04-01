@@ -5,34 +5,53 @@ html {
 }
 /* STEP 7: Collapse borders */
 table {
-
+    border: 1px solid #999;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
 /* STEP 9a: Adjust placement of table caption */
-
+    /* caption-side: bottom; */
 /* STEP 9b: Try different values for table-layout (https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout) in conjunction with the width property. */
 
 }
-/* STEP 10b: Zebra striping for columns */
-col:nth-child(2) {
 
+/* STEP 10b: Zebra striping for columns */
+/* col:nth-child(2) {
+    background: rgba(233, 36, 36, 0.3);
+} */
+
+colgroup + colgroup col:nth-child(1) {
+    background: rgba(196, 46, 32, 0.3); 
+}
+
+colgroup + colgroup col:nth-child(2) {
+    background: rgba(36, 56, 233, 0.3); 
+}
+
+colgroup + colgroup col:nth-child(3) {
+    background: rgba(46, 233, 36, 0.3); 
 }
 
 /* STEP 8: Adjust padding for usability with TH and TD */
 td, th {
-
+    border: 2px solid #999;
+    padding: 0.5em;
 }
 th {
     background: rgba(225,225,225,1);
 }
 /* STEP 6: Align table headings in the table body */
 tbody th {
-
+    text-align: right;
 }
 thead tr:first-child th:first-child {
     /* Hide top left cell - it's empty */
-
+    /* display: none; */
 }
 /* STEP 10a: Zebra striping for rows */
-
+tbody tr:nth-child(even) {
+    background: rgba(0,0,0,0.3);
+}
 tfoot td {
     font-size: 60%;
 }
