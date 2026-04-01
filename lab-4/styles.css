@@ -1,59 +1,65 @@
 @charset "utf-8";
-/* @import url('https://raw.githubusercontent.com/necolas/normalize.css/refs/heads/master/normalize.css'); */
 
 :root {
-    --thcol: rgb(50, 45, 45);
-    --zebra: rgba(0,0,0,0.05);
-    --border: #999;
+    --header-bg: rgba(75, 75, 75, 0.62);
+    --header-text: #fff;
+    --border: #ccc;
+    --zebra: rgba(0,0,0,0.04);
 }
 
-html{
-    font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+html {
+    font: 120%/1.3 "Trebuchet MS", Arial, Helvetica, sans-serif;
     background: #fff;
     color: #333;
 }
 
+/* TABLE WRAPPER */
 table {
-    background: #fff;
-    max-width: 100%;
-    border-spacing: 0;
     width: 100%;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-collapse: separate;
-    border-collapse: collapsed;
-    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.10);
-    -moz-box-shadow: 0 0 4px rgba(0,0,0,0.10);
-    box-shadow: 0 0 4px rgba(0,0,0,0.10);
-}
-
-table th,
-table td {
-    padding: 8px;
-    line-height: 18px;
-    text-align: left;
-    border-top: 1px solid #5f5d5d;
-}
-
-thead tr:nth-child(1) {
-    background: rgba(75, 75, 75, 0.612);
-    text-align: center; 
-}
-
-thead tr:nth-child(1) th {
-    text-align: center;
-}
-
-tbody {
+    border-collapse: collapse;
+    margin: 1rem 0;
     background: #fff;
-    font-style: italic;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 6px rgba(0,0,0,0.12);
 }
 
-tbody td:nth-child(1) {
+/* HEADER */
+thead tr {
+    background: var(--header-bg);
+    color: var(--header-text);
+}
+
+thead th {
+    padding: 10px 8px;
     text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #444;
 }
 
-/* target the rest */
+/* BODY */
+tbody tr:nth-child(even) {
+    background: var(--zebra);
+}
+
+tbody td {
+    padding: 8px;
+    border-top: 1px solid var(--border);
+}
+
+/* Team names */
+tbody td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+/* statistics */
 tbody td:nth-child(n+2) {
-    text-align: end;
+    text-align: right;
+}
+
+/* FOOTER */
+tfoot td {
+    padding: 8px;
+    font-size: 0.9rem;
+    border-top: 2px solid var(--border);
 }
