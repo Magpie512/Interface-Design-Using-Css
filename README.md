@@ -10,7 +10,7 @@
 <br/>
 [Lab Three](https://magpie512.github.io/Interface-Design-Using-Css/lab-3/index.html)
 <br/>
-[Lab Four](https://magpie512.github.io/Interface-Design-Using-Css/lab-4/index.html)
+[Lab Four](https://magpie512.github.io/Interface-Design-Using-Css/lab-4/index.htm)
 
 ## Assignments 
 [Assignment One](https://magpie512.github.io/Interface-Design-Using-Css/Assignment%20One/index.html)
