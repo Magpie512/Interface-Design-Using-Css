@@ -10,6 +10,7 @@
     --moss: #2d4c2d;
     --leaf: #4a7c44;
     --ethereal-gold: #d4af37;
+    --goldfel-leaf: #796211;
     --aetheric-selector:rgb(170, 199, 151);
     --glow: rgba(212, 175, 55, 0.4);
     --text-light: #e0f0e0;
@@ -201,10 +202,10 @@ aside h4 {
     border: 1px solid var(--leaf);
     text-align: center;
     transition: var(--transition);
+    position: relative;
 }
 
 .features li:hover {
-    transform: translateY(-5px);
     border-color: var(--ethereal-gold);
 }
 
@@ -241,11 +242,11 @@ header .link-github:hover {
     margin: 0;
     text-decoration: underline;
 }
-
-.link-guidelines,
-header .link-github:hover {
-    background: var(--ethereal-gold);
+/* this looks like shit no matter what I do*/
+.link-guidelines {
     color: var(--forest-verdant);
+    border-color: var(--goldfel-leaf);
+    background-color: var(--ethereal-gold);
 }
 
 /* Footer */
@@ -390,6 +391,7 @@ header .container {
     z-index: 2;
 }
 
+/* should mention that AI helped with the anim but i did do the anim for a myself*/
 header::after {
     content: "";
     position: absolute;
@@ -423,4 +425,18 @@ header::after {
         /* Moving them at different rates creates parallax depth */
         background-position: 500px 1000px, -400px 500px, 300px -300px;
     }
+}
+
+/* Shakes every link a bit on hover */
+a:hover {
+    display: inline-block;
+    animation: floaty 5s ease-in-out infinite;
+}
+
+@keyframes floaty {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    25%  { transform: translate(3px, -4px) rotate(1deg); }
+    50%  { transform: translate(-4px, -4px) rotate(-1deg); }
+    75%  { transform: translate(2px, -6px) rotate(0.5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
 }
