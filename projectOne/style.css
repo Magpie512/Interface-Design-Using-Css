@@ -10,6 +10,7 @@
     --moss: #2d4c2d;
     --leaf: #4a7c44;
     --ethereal-gold: #d4af37;
+    --aetheric-selector:rgb(170, 199, 151);
     --glow: rgba(212, 175, 55, 0.4);
     --text-light: #e0f0e0;
     --transition: 0.4s ease-in-out;
@@ -108,6 +109,31 @@ nav a {
 
 nav a:hover {
     color: var(--ethereal-gold);
+}
+
+/* Logic Gate CSS using attrivute selectors */
+/* Default state */
+nav a[href="#about"] {
+    color: var(--selected);
+}
+
+/* Hover/focus */
+nav a[href*="#"]:hover,
+nav a[href*="#"]:focus {
+    color: var(--ethereal-gold);
+}
+
+/* Active link highlighting */
+body:has(#about:target) nav a[href="#about"],
+body:has(#guidelines:target) nav a[href="#guidelines"],
+body:has(#contribute:target) nav a[href="#contribute"],
+body:has(#files:target) nav a[href="#files"] {
+    color: var(--aetheric-selector);
+}
+
+/* When nothing is targeted (initial load) */
+body:not(:has(:target)) nav a[href="#about"] {
+    color: var(--selected);
 }
 
 /* Main Layout */
@@ -329,16 +355,6 @@ a {
     .page-footer ul {
         flex-direction: column;
         gap: 0.8rem;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    body::before {
-        animation: none;
-    }
-
-    html {
-        scroll-behavior: auto;
     }
 }
 
