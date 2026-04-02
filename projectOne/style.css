@@ -39,14 +39,25 @@ body {
 }
 
 /* Header */
-header {
-    padding: 10vh 0;
-    text-align: center;
+header:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(to bottom, #152b15, var(--forest-verdant));
     background-image: url('060b8f0cb9319a8b896190f60c5a9bf9.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+header {
+    padding: 10vh 0;
+    text-align: center;
     border-bottom: 2px solid var(--ethereal-gold);
     position: relative;
     background-attachment: fixed;
@@ -190,6 +201,10 @@ aside h4 {
     border-radius: 50px;
 }
 
+.link-github:nth-of-type(1){
+    background-color: var(--forest-verdant);
+}
+
 header .link-github:hover {
     background: var(--ethereal-gold);
     color: var(--forest-verdant);
@@ -241,43 +256,77 @@ header .link-github:hover {
     top: 0;
 }
 
-/* Magick Particulates */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(2px 2px at 20px 30px, #fff, rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 50px 160px, #fff, rgba(0, 0, 0, 0));
-    background-repeat: repeat;
-    background-size: 200px 200px;
-    opacity: 0.1;
-    pointer-events: none;
-    animation: float 20s linear infinite;
-}
-
-@keyframes float {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-200px);
-    }
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+
+    /* Global spacing */
+    .container {
+        padding: 1rem;
+    }
+
+    body {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* Header */
+    header {
+        padding: 6vh 0;
+        background-attachment: scroll; /* mobile-friendly */
+    }
+
+    header h1 {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    /* Navigation */
     nav ul {
+        gap: 0.5rem;
+        padding: 0.7rem;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        padding: 0.4rem 0.6rem;
+    }
+
+    /* Articles */
+    article {
+        margin-bottom: 3rem;
+        padding: 1.2rem;
+        border-radius: 15px;
+    }
+
+    h2, h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Aside */
+    aside {
+        margin: 1rem 0;
+        padding: 1.5rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr; /* stack features */
         gap: 1rem;
     }
 
-    .container {
-        padding: 1rem;
+    /* Footer */
+    .page-footer {
+        padding: 2rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .page-footer ul {
+        flex-direction: column;
+        gap: 0.8rem;
     }
 }
 
@@ -307,7 +356,6 @@ main:has(article:not(#about):target) article#about {
     display: none;
 }
 
-
 main article:target {
     display: block !important;
     /* important is needed to override display: none in the :has selector */
@@ -316,4 +364,45 @@ main article:target {
 #guidelines:target~#about,
 #contribute:target~#about {
     display: none;
+}
+
+/* css crafter premade with my edits how do I even implement this *//* We use the existing header container to host the 'fireflies' */
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* We create 3 layers of "dots" using radial gradients */
+    background-image: 
+        radial-gradient(circle, var(--ethereal-gold) 1px, transparent 1px),
+        radial-gradient(circle, #e4ddb4 1.5px, transparent 1.5px),
+        radial-gradient(circle, var(--ethereal-gold) 1px, transparent 1px);
+    background-size: 80px 80px, 150px 150px, 200px 200px;
+    background-position: 0 0, 40px 60px, 130px 10px;
+    
+    /* Magical glow */
+    filter: drop-shadow(0 0 5px var(--ethereal-gold));
+    opacity: 0.5;
+    
+    /* This makes them move! */
+    animation: magicDrift 30s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes magicDrift {
+    0% {
+        background-position: 0 0, 40px 60px, 130px 10px;
+    }
+    100% {
+        /* Moving them at different rates creates parallax depth */
+        background-position: 500px 1000px, -400px 500px, 300px -300px;
+    }
 }
