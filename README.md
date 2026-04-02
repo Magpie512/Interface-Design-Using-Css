@@ -20,4 +20,4 @@ Try It out in mobile. I did some media-queries(querys? what? infinite medal!!)
 Beep
 
 ## Projects
-[Assignment One](https://magpie512.github.io/Interface-Design-Using-Css/projectOne/stylepage.htm)
+[Assignment One](https://magpie512.github.io/Interface-Design-Using-Css/projectOne/stylestage.htm)
