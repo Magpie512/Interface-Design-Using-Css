@@ -4,7 +4,7 @@
 /*Lets go for  a fantasy forest */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* inspo for later https://codepen.io/z-/pen/bpxgWZ*/
+/* inspo for later https://codepen.io/z-/pen/bpxgWZ */
 :root {
     --forest-verdant: #0a1a0a;
     --moss: #2d4c2d;
@@ -18,16 +18,16 @@
 }
 
 /* Smooth it out */
-html {
-    scroll-behavior: smooth;
+*, html {
+    scroll-behavior: smooth !important;
 }
 
 body {
     margin: 0;
     background-color: var(--forest-verdant);
-    background-image:
+    /* background-image:
         radial-gradient(circle at 20% 30%, rgba(74, 124, 68, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 40%); */
     color: var(--text-light);
     font-family: 'Lora', serif;
     line-height: 1.6;
@@ -357,6 +357,12 @@ a {
         flex-direction: column;
         gap: 0.8rem;
     }
+
+    a:hover {
+    display: inline-block;
+    /* animation: floaty 5s ease-in-out infinite; */
+}
+
 }
 
 /* Accordion Logic | AI is trying to help me figure it out but its only taught me :has and :is */
@@ -432,6 +438,8 @@ a:hover {
     display: inline-block;
     animation: floaty 5s ease-in-out infinite;
 }
+
+
 
 @keyframes floaty {
     0%   { transform: translate(0, 0) rotate(0deg); }
