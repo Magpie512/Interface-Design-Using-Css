@@ -100,7 +100,7 @@ body {
     max-width: 960px;
     margin-inline: auto;
     padding-inline: clamp(1rem, 5vw, 2.5rem);
-    /* Clamp is */
+    /* Clamp is like a css min max function  forgot to finish this note*/
 }
 
 /* Header =========================================== */
@@ -230,7 +230,7 @@ header .link-github svg {
     flex-shrink: 0;
 }
 
-/*  NAVI | Hey look listen  */
+/*  NAVI  */
 nav {
     position: sticky;
     top: 0;
@@ -277,7 +277,7 @@ nav a:focus-visible {
     border-bottom-color: var(--gold-mid);
     outline: none;
 }
-
+/* ATTRIBUTTE HANDLING */
 /* ACTIVE states improved handling */
 body:has(#about:target)      nav a[href="#about"],
 body:has(#guidelines:target) nav a[href="#guidelines"],
@@ -443,6 +443,8 @@ blockquote::before {
     pointer-events: none;
     opacity: 0.6;
 }
+ /* BASH SCRIPT UNICODE IS 200 RANGE */
+ /* YOURE WELCOME */
 
 blockquote::after {
     content: "\201D"; /* Close quote | figured out alt 201 does ╔ and i can do ╔╩╦╠═╚╬╧╨╤╟╞╗─├ and so on and so forth so you bet my bash applications are about to look better*/ 
@@ -482,7 +484,7 @@ a:focus-visible {
 aside {
     background: var(--bark);
     border: 1px solid var(--gold-dark);
-    border-radius: var(--r-md);
+    border-radius: var(--radius-md);
     padding: var(--space-lg) var(--space-md);
     margin: var(--space-lg) 0;
     box-shadow:
@@ -616,7 +618,7 @@ aside.profile > .container > a:hover {
     align-items: center;
     gap: 0.5rem;
     padding: 0.7rem 1.4rem;
-    border-radius: var(--r-pill);
+    border-radius: var(--radius-pill);
     font-family: 'Lora', serif;
     font-size: 0.85rem;
     font-weight: 600;
@@ -736,7 +738,7 @@ aside.profile > .container > a:hover {
     transition: color var(--trans-fast), border-color var(--trans-fast);
 }
 
-.page-footer ul li a:hover {color: var(--gold-mid);border-bottom-color: var(--gold-dark);} /* this feels illegal*/
+.page-footer ul li a:hover {color: var(--gold-mid);border-bottom-color: var(--gold-dark);} /* this feels illegal | Zara larson moment*/
 
 /* Small decorative divider above footer */
 .page-footer::before {
@@ -754,10 +756,19 @@ section.container:last-child::after {
 }
 
 /* Druids grove webkit scroll bar. which now i also dont like. god help me. */
-/* ::-webkit-scrollbar              { width: 8px; }
+::-webkit-scrollbar              { width: 12px; }
 ::-webkit-scrollbar-track        { background: var(--forest-verdant); }
 ::-webkit-scrollbar-thumb        { background: var(--moss); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover  { background: var(--leaf); } */
+::-webkit-scrollbar-thumb:hover  { background: var(--leaf); }
+
+/* Looking into it i have found resources to change the mouse so guess what gang */
+
+/* https://www.cursors-4u.com/mmorpg*/ 
+::-webkit-grab {cursor: url('Normal.png') 4 4, grab;}
+::-webkit-grabbing {cursor: url('Link.png') 4 4, grabbing;}
+* {cursor: url('Normal.png') 4 4, auto;}
+a:hover {cursor: url('Link.png') 4 4, pointer;}
+/* This is jank but I am happy */
 
 /* Responsive Layout Reform */
 @media (max-width: 640px) {
