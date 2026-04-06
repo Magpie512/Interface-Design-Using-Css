@@ -7,32 +7,32 @@
 /* Also completely irrelevant but I thought my favourite font EB GARAMOND was spelled EB GARMOND. I am a moron. */
 
 :root {
-    /* Core Colour Palette renamed and properly inspired by the druids grove in bg3 */
-    --forest-verdant:   #070f07;
-    --moss:             #243c24;
-    --leaf:             #3d6b38;
-    --leaf-light:       #5a9954;
-    --bark:             #1a120b;
+/* Core Colour redone again */
+--forest-verdant:   #0b0e12;
+--moss:             #4a4f57;
+--leaf:             #5a6068;
+--leaf-light:       #6c7480;
+--bark:             #1a1d22;
 
-    /* Gold range */
-    --gold-bright:      #e8c84a;
-    --gold-mid:         #d4af37;
-    --gold-dark:        #8a6f1e;
-    --gold-glow:        rgba(212, 175, 55, 0.35);
-    --gold-glow-strong: rgba(212, 175, 55, 0.65);
+/* Arcane range */
+--gold-bright:      #8fa3ff;
+--gold-mid:         #6b7de0;
+--gold-dark:        #1c2a55;
+--gold-glow:        rgba(107, 125, 224, 0.35);
+--gold-glow-strong: rgba(107, 125, 224, 0.65);
 
-    /* Text */
-    --text-light:       #dceede;
-    --text-muted:       #8aab8a;
-    --text-on-gold:     #0a1a0a;
+/* Text */
+--text-light:       #e6e9f2;
+--text-muted:       #9aa1b0;
+--text-on-gold:     #0b0e12;
 
-    /* Surfaces */
-    --surface-1:        rgba(255,255,255,0.03);
-    --surface-2:        rgba(255,255,255,0.07);
-    --surface-glass:    rgba(10, 26, 10, 0.82);
+/* Surfaces */
+--surface-1:        rgba(120, 140, 170, 0.04);
+--surface-2:        rgba(255, 255, 255, 0.06); 
+--surface-glass:    rgba(40, 50, 65, 0.78);     
 
-    /* Navi active */
-    --navi-active:       #aac797;
+/* Navi active */
+--navi-active:      #7bc7ff;        
 
     /* Trans(itions) */
     --trans-fast:   0.2s ease;
