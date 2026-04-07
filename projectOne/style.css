@@ -7,54 +7,56 @@
 /* Also completely irrelevant but I thought my favourite font EB GARAMOND was spelled EB GARMOND. I am a moron. */
 
 :root {
-/* Core Colour redone again */
---forest-verdant:   #0b0e12;
---moss:             #4a4f57;
---leaf:             #5a6068;
---leaf-light:       #6c7480;
---bark:             #1a1d22;
+    /* Core Colour redone again */
+    --forest-verdant: #0b0e12;
+    --moss: #4a4f57;
+    --leaf: #5a6068;
+    --leaf-light: #6c7480;
+    --bark: #1a1d22;
 
-/* Arcane range */
---gold-bright:      #8fa3ff;
---gold-mid:         #6b7de0;
---gold-dark:        #1c2a55;
---gold-glow:        rgba(107, 125, 224, 0.35);
---gold-glow-strong: rgba(107, 125, 224, 0.65);
+    /* Arcane range */
+    --gold-bright: #8fa3ff;
+    --gold-mid: #6b7de0;
+    --gold-dark: #1c2a55;
+    --gold-glow: rgba(107, 125, 224, 0.35);
+    --gold-glow-strong: rgba(107, 125, 224, 0.65);
 
-/* Text */
---text-light:       #e6e9f2;
---text-muted:       #9aa1b0;
---text-on-gold:     #0b0e12;
+    /* Text */
+    --text-light: #e6e9f2;
+    --text-muted: #9aa1b0;
+    --text-on-gold: #0b0e12;
 
-/* Surfaces */
---surface-1:        rgb(46, 47, 50);
---surface-2:        rgba(255, 255, 255, 0.06); 
---surface-glass:    rgba(40, 50, 65, 0.78);     
+    /* Surfaces */
+    --surface-1: rgb(46, 47, 50);
+    --surface-2: rgba(255, 255, 255, 0.06);
+    --surface-glass: rgba(40, 50, 65, 0.78);
 
-/* Navi active */
---navi-active:      #7bc7ff;        
+    /* Navi active */
+    --navi-active: #7bc7ff;
 
     /* Trans(itions) */
-    --trans-fast:   0.2s ease;
-    --trans-mid:    0.4s ease-in-out;
-    --trans-slow:   0.7s ease;
+    --trans-fast: 0.2s ease;
+    --trans-mid: 0.4s ease-in-out;
+    --trans-slow: 0.7s ease;
 
     /* Spacing Guild */
-    --space-xs:  0.4rem;
-    --space-sm:  0.8rem;
-    --space-md:  1.5rem;
-    --space-lg:  3rem;
-    --space-xl:  6rem;
+    --space-xs: 0.4rem;
+    --space-sm: 0.8rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+    --space-xl: 6rem;
 
     /* Border radius */
-    --radius-sm:  6px;
-    --radius-md:  14px;
-    --radius-lg:  24px;
+    --radius-sm: 6px;
+    --radius-md: 14px;
+    --radius-lg: 24px;
     --radius-pill: 999px;
 }
 
 /* Global Box model reset factoring */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -63,7 +65,7 @@
 html {
     scroll-behavior: smooth;
     /* Yeah so future mars. I THINK ITS YOUR DISABLED HARDWARE ACCEL THAT DISABLES SMOOTH SCROLL */
-    font-size: 17px; 
+    font-size: 17px;
 }
 
 /* Body ================================================================ */
@@ -91,8 +93,8 @@ body {
     transition: top var(--trans-fast);
 }
 
-.skip-link:focus { 
-    top: 1rem; 
+.skip-link:focus {
+    top: 1rem;
 }
 
 /*  Layout Container ===================================== */
@@ -120,9 +122,9 @@ header::before {
     inset: 0;
     background:
         linear-gradient(to bottom,
-            rgba(7,15,7,0.25) 0%,
-            rgba(7,15,7,0.55) 60%,
-            rgba(7,15,7,0.92) 100%),
+            rgba(7, 15, 7, 0.25) 0%,
+            rgba(7, 15, 7, 0.55) 60%,
+            rgba(7, 15, 7, 0.92) 100%),
         url('060b8f0cb9319a8b896190f60c5a9bf9.jpg') center / cover no-repeat;
     z-index: -2;
 }
@@ -134,8 +136,8 @@ header::after {
     inset: 0;
     background-image:
         radial-gradient(circle, var(--gold-mid) 1.2px, transparent 1.2px),
-        radial-gradient(circle, #e4ddb4 1.6px,         transparent 1.6px),
-        radial-gradient(circle, var(--gold-mid) 0.9px,  transparent 0.9px);
+        radial-gradient(circle, #e4ddb4 1.6px, transparent 1.6px),
+        radial-gradient(circle, var(--gold-mid) 0.9px, transparent 0.9px);
     background-size: 90px 90px, 160px 160px, 220px 220px;
     background-position: 0 0, 45px 65px, 135px 15px;
     filter: drop-shadow(0 0 6px var(--gold-mid));
@@ -146,12 +148,18 @@ header::after {
 }
 
 @keyframes magicDrift {
-    0%   { background-position: 0 0,      45px 65px,   135px 15px; }
-    100% { background-position: 500px 1000px, -400px 500px, 300px -300px; }
+    0% {
+        background-position: 0 0, 45px 65px, 135px 15px;
+    }
+
+    100% {
+        background-position: 500px 1000px, -400px 500px, 300px -300px;
+    }
 }
 
 header .container {
-    position: relative; z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
@@ -161,7 +169,7 @@ header h1 {
     color: var(--gold-bright);
     text-shadow:
         0 0 30px var(--gold-glow-strong),
-        0 2px 4px rgba(0,0,0,0.8);
+        0 2px 4px rgba(0, 0, 0, 0.8);
     letter-spacing: 0.04em;
     line-height: 1.15;
     margin-bottom: 0.5rem;
@@ -171,7 +179,8 @@ header h1 {
 }
 
 header h2 {
-    font-family: 'Lora', serif; /* Like sir lora from DOS2 */
+    font-family: 'Lora', serif;
+    /* Like sir lora from DOS2 */
     font-style: italic;
     font-weight: 400;
     font-size: clamp(0.95rem, 2.5vw, 1.2rem);
@@ -189,11 +198,14 @@ header p {
 }
 
 @keyframes fadeRise {
-    from { 
-        opacity: 0; transform: translateY(18px); 
+    from {
+        opacity: 0;
+        transform: translateY(18px);
     }
-    to   { 
-        opacity: 1; transform: translateY(0); 
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -235,8 +247,8 @@ nav {
     background: var(--surface-glass);
     backdrop-filter: blur(14px) saturate(1.4);
     -webkit-backdrop-filter: blur(14px) saturate(1.4);
-    border-bottom: 1px solid rgba(212,175,55,0.18);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -249,8 +261,8 @@ nav ul {
     margin: 0;
 }
 
-nav li { 
-    display: flex; 
+nav li {
+    display: flex;
 }
 
 nav a {
@@ -274,12 +286,13 @@ nav a:focus-visible {
     border-bottom-color: var(--gold-mid);
     outline: none;
 }
+
 /* ATTRIBUTTE HANDLING */
 /* ACTIVE states improved handling */
-body:has(#about:target)      nav a[href="#about"],
+body:has(#about:target) nav a[href="#about"],
 body:has(#guidelines:target) nav a[href="#guidelines"],
 body:has(#contribute:target) nav a[href="#contribute"],
-body:has(#files:target)      nav a[href="#files"] {
+body:has(#files:target) nav a[href="#files"] {
     color: var(--nav-active);
     border-bottom-color: var(--leaf-light);
 }
@@ -303,8 +316,8 @@ main article::before {
     position: absolute;
     inset: 0;
     background: url('8a79ae60c65c025c65d1e9a70fdacd95.jpg');
-    background-size: auto; 
-    opacity: 0.08; 
+    background-size: auto;
+    opacity: 0.08;
     pointer-events: none;
     z-index: 0;
 }
@@ -318,7 +331,7 @@ main article#about {
     display: block;
 }
 
-:target ~ main article#about,
+:target~main article#about,
 main:has(article:not(#about):target) article#about {
     display: none;
 }
@@ -328,24 +341,26 @@ main article:target {
     animation: panelReveal 0.5s var(--trans-slow) both;
 }
 
-#guidelines:target ~ #about,
-#contribute:target ~ #about {
+#guidelines:target~#about,
+#contribute:target~#about {
     display: none;
 }
 
 @keyframes panelReveal {
-    from { 
-        opacity: 0; transform: translateY(10px); 
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
 
-    to   { 
-        opacity: 1; transform: translateY(0); 
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 article {
     background: var(--surface-1);
-    border: 1px solid rgba(212,175,55,0.08);
+    border: 1px solid rgba(212, 175, 55, 0.08);
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
@@ -354,8 +369,8 @@ section.container {
     padding-block: var(--space-lg);
 }
 
-section.container + section.container {
-    border-top: 1px solid rgba(255,255,255,0.05);
+section.container+section.container {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Headings*/
@@ -396,13 +411,13 @@ p {
     font-size: 1rem;
 }
 
-p:last-child { 
-    margin-bottom: 0; 
+p:last-child {
+    margin-bottom: 0;
 }
 
-strong { 
-    color: var(--gold-bright); 
-    font-weight: 600; 
+strong {
+    color: var(--gold-bright);
+    font-weight: 600;
 }
 
 /* LELOLELOLELOLELOLE LISTS*/
@@ -418,8 +433,8 @@ article li {
     line-height: 1.65;
 }
 
-article ul li::marker { 
-    color: var(--gold-dark); 
+article ul li::marker {
+    color: var(--gold-dark);
 }
 
 article ol li::marker {
@@ -433,8 +448,8 @@ blockquote {
     position: relative;
     margin: var(--space-lg) 0;
     padding: var(--space-md) var(--space-md) var(--space-md) calc(var(--space-md) + 1rem);
-    background: rgba(212,175,55,0.06);
-    border: 1px solid rgba(212,175,55,0.2);
+    background: rgba(212, 175, 55, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.2);
     border-radius: var(--radius-md);
     font-family: 'EB Garamond', Georgia, serif;
     font-size: 1.05rem;
@@ -443,7 +458,8 @@ blockquote {
 }
 
 blockquote::before {
-    content: "\201C"; /* Open quote */
+    content: "\201C";
+    /* Open quote */
     position: absolute;
     top: -0.3rem;
     left: 0.6rem;
@@ -454,11 +470,13 @@ blockquote::before {
     pointer-events: none;
     opacity: 0.6;
 }
- /* BASH SCRIPT UNICODE IS 200 RANGE */
- /* YOURE WELCOME */
+
+/* BASH SCRIPT UNICODE IS 200 RANGE */
+/* YOURE WELCOME */
 
 blockquote::after {
-    content: "\201D"; /* Close quote | figured out alt 201 does ╔ and i can do ╔╩╦╠═╚╬╧╨╤╟╞╗─├ and so on and so forth so you bet my bash applications are about to look better*/ 
+    content: "\201D";
+    /* Close quote | figured out alt 201 does ╔ and i can do ╔╩╦╠═╚╬╧╨╤╟╞╗─├ and so on and so forth so you bet my bash applications are about to look better*/
     position: absolute;
     bottom: -0.3rem;
     right: 0.6rem;
@@ -470,9 +488,9 @@ blockquote::after {
     opacity: 0.6;
 }
 
-blockquote p { 
-    margin-bottom: 0; 
-    font-style: inherit; 
+blockquote p {
+    margin-bottom: 0;
+    font-style: inherit;
 }
 
 /*  Inline Links  */
@@ -499,8 +517,8 @@ aside {
     padding: var(--space-lg) var(--space-md);
     margin: var(--space-lg) 0;
     box-shadow:
-        inset 0 0 60px rgba(0,0,0,0.5),
-        0 8px 40px rgba(0,0,0,0.6);
+        inset 0 0 60px rgba(0, 0, 0, 0.5),
+        0 8px 40px rgba(0, 0, 0, 0.6);
     position: relative;
     overflow: hidden;
 }
@@ -508,7 +526,7 @@ aside {
 aside h2,
 aside h4 {
     text-align: center;
-    border-bottom: 1px solid rgba(212,175,55,0.3);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     padding-bottom: var(--space-sm);
     margin-bottom: var(--space-md);
 }
@@ -532,14 +550,14 @@ aside.profile li {
     gap: 0.75rem;
     font-size: 0.9rem;
     padding-bottom: 0.6rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-aside.profile li:last-child { 
-    border-bottom: none; 
+aside.profile li:last-child {
+    border-bottom: none;
 }
 
-aside.profile li > span:first-child {
+aside.profile li>span:first-child {
     color: var(--text-muted);
     font-size: 0.8rem;
     font-weight: 600;
@@ -550,11 +568,11 @@ aside.profile li > span:first-child {
     padding-top: 0.1rem;
 }
 
-aside.profile a { 
-    color: var(--text-light); 
+aside.profile a {
+    color: var(--text-light);
 }
 
-aside.profile > .container > a {
+aside.profile>.container>a {
     display: inline-block;
     margin-top: var(--space-sm);
     padding: 0.55rem 1.2rem;
@@ -565,10 +583,10 @@ aside.profile > .container > a {
     transition: all var(--trans-fast);
 }
 
-aside.profile > .container > a:hover {
+aside.profile>.container>a:hover {
     border-color: var(--gold-mid);
     color: var(--gold-mid);
-    background: rgba(212,175,55,0.07);
+    background: rgba(212, 175, 55, 0.07);
 }
 
 /* Featured Styles Grid  */
@@ -583,21 +601,21 @@ aside.profile > .container > a:hover {
 
 .features li {
     background: var(--surface-2);
-    border: 1px solid rgba(212,175,55,0.15);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     border-radius: var(--radius-md);
     padding: 1rem;
     text-align: center;
     transition: border-color var(--bark),
-                transform var(--trans-fast), box-shadow var(--trans-fast);
+        transform var(--trans-fast), box-shadow var(--trans-fast);
 }
 
 .features li:hover {
     border-color: var(--gold-mid);
-    background: rgba(212,175,55,0.08);
+    background: rgba(212, 175, 55, 0.08);
 }
 
-.features li > span { 
-    display: block; 
+.features li>span {
+    display: block;
 }
 
 .features li a {
@@ -606,12 +624,12 @@ aside.profile > .container > a:hover {
     font-size: 0.9rem;
 }
 
-.features li a:hover { 
-    color: var(--gold-bright); 
-    border-bottom: none; 
+.features li a:hover {
+    color: var(--gold-bright);
+    border-bottom: none;
 }
 
-.features li > span > span {
+.features li>span>span {
     display: block;
     color: var(--text-muted);
     font-size: 0.78rem;
@@ -655,7 +673,7 @@ aside.profile > .container > a:hover {
 .link-downloadcss:hover,
 .link-downloadhtml:hover,
 .link-codepen:hover {
-    background: rgba(212,175,55,0.1);
+    background: rgba(212, 175, 55, 0.1);
     border-color: var(--gold-bright);
     color: var(--gold-bright);
 }
@@ -719,17 +737,17 @@ aside.profile > .container > a:hover {
     /* youre welcome to whoever reviews this later*/
     font-size: 0.82rem;
     color: var(--text-muted);
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     line-height: 1.8;
 }
 
-.page-footer p { 
-    color: var(--text-muted); 
-    font-size: 0.82rem; 
+.page-footer p {
+    color: var(--text-muted);
+    font-size: 0.82rem;
 }
 
-.page-footer p + p { 
-    margin-top: var(--space-sm); 
+.page-footer p+p {
+    margin-top: var(--space-sm);
 }
 
 .page-footer ul {
@@ -751,11 +769,17 @@ aside.profile > .container > a:hover {
     transition: color var(--trans-fast);
 }
 
-.page-footer ul li a:hover {color: var(--gold-mid);border-bottom-color: var(--gold-dark);} /* this feels illegal | Zara larson moment*/
+.page-footer ul li a:hover {
+    color: var(--gold-mid);
+    border-bottom-color: var(--gold-dark);
+}
+
+/* this feels illegal | Zara larson moment*/
 
 /* Small decorative divider above footer */
 .page-footer::before {
-    content: "✦  ✦  ✦"; /* https://www.compart.com/en/unicode/U+2726 */
+    content: "✦  ✦  ✦";
+    /* https://www.compart.com/en/unicode/U+2726 */
     display: block;
     font-size: 0.7rem;
     color: var(--gold-dark);
@@ -764,29 +788,55 @@ aside.profile > .container > a:hover {
     opacity: 0.7;
 }
 
-section.container:last-child::after { 
-    display: none; 
+section.container:last-child::after {
+    display: none;
 }
 
 /* Druids grove webkit scroll bar. which now i also dont like. god help me. */
-::-webkit-scrollbar              { width: 12px; }
-::-webkit-scrollbar-track        { background: var(--forest-verdant); }
-::-webkit-scrollbar-thumb        { background: var(--moss); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover  { background: var(--leaf); }
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--forest-verdant);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--moss);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--leaf);
+}
 
 /* Looking into it i have found resources to change the mouse so guess what gang */
 
-/* https://www.cursors-4u.com/mmorpg*/ 
-::-webkit-grab {cursor: url('Normal.png') 4 4, grab;}
-::-webkit-grabbing {cursor: url('Link.png') 4 4, grabbing;}
-* {cursor: url('Normal.png') 4 4, auto;}
-a:hover {cursor: url('Link.png') 4 4, pointer;}
+/* https://www.cursors-4u.com/mmorpg*/
+::-webkit-grab {
+    cursor: url('Normal.png') 4 4, grab;
+}
+
+::-webkit-grabbing {
+    cursor: url('Link.png') 4 4, grabbing;
+}
+
+* {
+    cursor: url('Normal.png') 4 4, auto;
+}
+
+a:hover {
+    cursor: url('Link.png') 4 4, pointer;
+}
+
 /* This is jank but I am happy */
 
 /* Responsive Layout Reform */
 @media (max-width: 640px) {
 
-    header { padding: 8vh 0 6vh; }
+    header {
+        padding: 8vh 0 6vh;
+    }
 
     nav a {
         font-size: 0.72rem;
@@ -794,7 +844,9 @@ a:hover {cursor: url('Link.png') 4 4, pointer;}
         letter-spacing: 0.07em;
     }
 
-    aside { padding: var(--space-md) var(--space-sm); }
+    aside {
+        padding: var(--space-md) var(--space-sm);
+    }
 
     .features {
         grid-template-columns: 1fr 1fr;
@@ -813,5 +865,7 @@ a:hover {cursor: url('Link.png') 4 4, pointer;}
 }
 
 @media (max-width: 420px) {
-    .features { grid-template-columns: 1fr; }
+    .features {
+        grid-template-columns: 1fr;
+    }
 }
