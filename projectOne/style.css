@@ -9,7 +9,7 @@
 :root {
     /* Core Colour redone again */
     --forest-verdant: #0b0e12;
-    --moss: #4a4f57;
+    --moss: #626c7d;
     --leaf: #5a6068;
     --leaf-light: #6c7480;
     --bark: #1a1d22;
@@ -17,7 +17,7 @@
     /* Arcane range */
     --gold-bright: #8fa3ff;
     --gold-mid: #6b7de0;
-    --gold-dark: #1c2a55;
+    --gold-dark: #21387d;
     --gold-glow: rgba(107, 125, 224, 0.35);
     --gold-glow-strong: rgba(107, 125, 224, 0.65);
 
@@ -27,7 +27,7 @@
     --text-on-gold: #0b0e12;
 
     /* Surfaces */
-    --surface-1: rgb(46, 47, 50);
+    --surface-1: rgb(51, 63, 100);
     --surface-2: rgba(255, 255, 255, 0.06);
     --surface-glass: rgba(40, 50, 65, 0.78);
 
@@ -526,7 +526,7 @@ aside {
 aside h2,
 aside h4 {
     text-align: center;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(146, 189, 251, 0.3);
     padding-bottom: var(--space-sm);
     margin-bottom: var(--space-md);
 }
@@ -586,7 +586,7 @@ aside.profile>.container>a {
 aside.profile>.container>a:hover {
     border-color: var(--gold-mid);
     color: var(--gold-mid);
-    background: rgba(212, 175, 55, 0.07);
+    background: rgba(100, 96, 220, 0.458);
 }
 
 /* Featured Styles Grid  */
@@ -601,7 +601,8 @@ aside.profile>.container>a:hover {
 
 .features li {
     background: var(--surface-2);
-    border: 1px solid rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(54, 166, 252, 0.434);
+    /* i forgot to make this a root omg*/ 
     border-radius: var(--radius-md);
     padding: 1rem;
     text-align: center;
@@ -611,7 +612,7 @@ aside.profile>.container>a:hover {
 
 .features li:hover {
     border-color: var(--gold-mid);
-    background: rgba(212, 175, 55, 0.08);
+    background: rgba(55, 84, 212, 0.214);
 }
 
 .features li>span {
@@ -673,7 +674,8 @@ aside.profile>.container>a:hover {
 .link-downloadcss:hover,
 .link-downloadhtml:hover,
 .link-codepen:hover {
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(55, 115, 212, 0.1);
+    /* how many colours did i fucking forget*/
     border-color: var(--gold-bright);
     color: var(--gold-bright);
 }
@@ -773,8 +775,6 @@ aside.profile>.container>a:hover {
     color: var(--gold-mid);
     border-bottom-color: var(--gold-dark);
 }
-
-/* this feels illegal | Zara larson moment*/
 
 /* Small decorative divider above footer */
 .page-footer::before {
