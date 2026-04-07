@@ -64,11 +64,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 html {
-    scroll-behavior: smooth;
-    /* Yeah so future mars. I THINK ITS YOUR DISABLED HARDWARE ACCEL THAT DISABLES SMOOTH SCROLL */
+    /* scroll-behavior: smooth; */
+    /* no its broken on school pcs too */
+
     font-size: 17px;
     overflow-x:hidden; /* fixes the unfollowing nav */
 }
