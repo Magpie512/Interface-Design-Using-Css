@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
 
 /* Redoing this because ESO is taking ten years to download and I redid Teoph's website for their uh like student video thing? I actually have no clue what to call it*/
+/* hey so getting back into eso is overwhelming as fuck */
 
 /* Also completely irrelevant but I thought my favourite font EB GARAMOND was spelled EB GARMOND. I am a moron. */
   
@@ -31,8 +32,9 @@
     --surface-2: rgba(255, 255, 255, 0.06);
     --surface-glass: rgba(40, 50, 65, 0.78);
 
-    /* Navi active */
+    /* Navi */
     --navi-active: #7bc7ff;
+    --nav-height: 90px;
 
     /* Trans(itions) */
     --trans-fast: 0.2s ease;
@@ -66,6 +68,7 @@ html {
     scroll-behavior: smooth;
     /* Yeah so future mars. I THINK ITS YOUR DISABLED HARDWARE ACCEL THAT DISABLES SMOOTH SCROLL */
     font-size: 17px;
+    overflow-x:hidden; /* fixes the unfollowing nav */
 }
 
 /* Body ================================================================ */
@@ -75,7 +78,6 @@ body {
     font-family: 'Lora', Georgia, serif;
     font-size: 1rem;
     line-height: 1.75;
-    overflow-x: hidden;
 }
 
 /*  Skip Link  */
@@ -136,7 +138,7 @@ header::after {
     inset: 0;
     background-image:
         radial-gradient(circle, var(--gold-mid) 1.2px, transparent 1.2px),
-        radial-gradient(circle, #e4ddb4 1.6px, transparent 1.6px),
+        radial-gradient(circle, #b4e4df 1.6px, transparent 1.6px),
         radial-gradient(circle, var(--gold-mid) 0.9px, transparent 0.9px);
     background-size: 90px 90px, 160px 160px, 220px 220px;
     background-position: 0 0, 45px 65px, 135px 15px;
@@ -304,14 +306,14 @@ body:not(:has(:target)) nav a[href="#about"] {
 }
 
 /* MAIN & ARTICLES */
-main {
+body {
     position: relative;
-    padding-block: var(--space-xl);
 }
 
-/* Forgot to mention I used AI to figure out the need for pos relative*/
+/* Forgot to mention I used AI to figure out the need for pos relative and for the before**/
 
-main article::before {
+/* OH MY GOD BODY */
+body::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -362,7 +364,13 @@ article {
     background: var(--surface-1);
     border: 1px solid rgba(212, 175, 55, 0.08);
     border-radius: var(--radius-lg);
+    margin: var(--space-md) auto;
     overflow: hidden;
+}
+
+/* nav scroll fix */
+article[id] {
+    scroll-margin-top: var(--nav-height);
 }
 
 section.container {
@@ -515,7 +523,7 @@ aside {
     border: 1px solid var(--gold-dark);
     border-radius: var(--radius-md);
     padding: var(--space-lg) var(--space-md);
-    margin: var(--space-lg) 0;
+    margin: var(--space-lg) ;
     box-shadow:
         inset 0 0 60px rgba(0, 0, 0, 0.5),
         0 8px 40px rgba(0, 0, 0, 0.6);
@@ -844,6 +852,10 @@ a:hover {
         letter-spacing: 0.07em;
     }
 
+    main article {
+        padding: var(--space-md) var(--space-sm);
+    }
+
     aside {
         padding: var(--space-md) var(--space-sm);
     }
@@ -868,4 +880,8 @@ a:hover {
     .features {
         grid-template-columns: 1fr;
     }
+}
+
+.styles{
+    position: relative;
 }
