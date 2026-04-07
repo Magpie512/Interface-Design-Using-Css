@@ -636,8 +636,8 @@ aside.profile > .container > a:hover {
     letter-spacing: 0.05em;
     text-decoration: none;
     border: 1px solid;
-    transition: background var(--trans-fast), border-color var(--trans-fast),
-                color var(--trans-fast), box-shadow var(--trans-fast), transform var(--trans-fast);
+    /* Just realised a bunch of my transitions are broken copy pastes.
+    review your 4 hour coding sessions*/
     cursor: pointer;
     margin-top: var(--space-sm);
 }
