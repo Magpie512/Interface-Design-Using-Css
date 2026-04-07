@@ -20,7 +20,7 @@
     /* Arcane range */
     --gold-bright: #8fa3ff;
     --gold-mid: #6b7de0;
-    --gold-dark: #21387d;
+    --gold-dark: #8b9fdb; /* Not dark anymore, gobi */
     --gold-glow: rgba(107, 125, 224, 0.35);
     --gold-glow-strong: rgba(107, 125, 224, 0.65);
 
