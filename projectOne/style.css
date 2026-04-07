@@ -211,9 +211,6 @@ header .link-github {
     font-size: 0.9rem;
     text-decoration: none;
     letter-spacing: 0.03em;
-    transition: background var(--trans-fast), border-color var(--trans-fast), color var(--trans-fast),
-                box-shadow var(--trans-fast), transform var(--trans-fast);
-    animation: fadeRise 1.1s 0.5s var(--trans-slow) both;
 }
 
 header .link-github:hover,
@@ -293,24 +290,23 @@ body:not(:has(:target)) nav a[href="#about"] {
     border-bottom-color: var(--leaf-light);
 }
 
-
-
 /* MAIN & ARTICLES */
 main {
     position: relative;
     padding-block: var(--space-xl);
 }
 
+/* Forgot to mention I used AI to figure out the need for pos relative*/
+
 main article::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('8a79ae60c65c025c65d1e9a70fdacd95.jpg') repeat;
-    background-size: auto; /* keeps native pixel resolution, tiles naturally */
-    opacity: 0.08; /* subtle — tweak to taste */
+    background: url('8a79ae60c65c025c65d1e9a70fdacd95.jpg');
+    background-size: auto; 
+    opacity: 0.08; 
     pointer-events: none;
     z-index: 0;
-    border-radius: var(--radius-lg); /* matches article's own radius */
 }
 
 /* Acoridon Logic */
@@ -816,4 +812,18 @@ a:hover {cursor: url('Link.png') 4 4, pointer;}
 
 @media (max-width: 420px) {
     .features { grid-template-columns: 1fr; }
+}
+
+/* trying to apply a background to the footer as per googles guidance with main before but its a bit tricky. either that or the movie fatherhood is distracting me*/
+.page-footer{position: relative;}
+
+footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('8a79ae60c65c025c65d1e9a70fdacd95.jpg') repeat;
+    background-size: auto;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
 }
