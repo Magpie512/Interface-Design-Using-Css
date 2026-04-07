@@ -27,7 +27,7 @@
 --text-on-gold:     #0b0e12;
 
 /* Surfaces */
---surface-1:        rgba(120, 140, 170, 0.04);
+--surface-1:        rgb(46, 47, 50);
 --surface-2:        rgba(255, 255, 255, 0.06); 
 --surface-glass:    rgba(40, 50, 65, 0.78);     
 
@@ -293,9 +293,24 @@ body:not(:has(:target)) nav a[href="#about"] {
     border-bottom-color: var(--leaf-light);
 }
 
+
+
 /* MAIN & ARTICLES */
 main {
+    position: relative;
     padding-block: var(--space-xl);
+}
+
+main article::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('8a79ae60c65c025c65d1e9a70fdacd95.jpg') repeat;
+    background-size: auto; /* keeps native pixel resolution, tiles naturally */
+    opacity: 0.08; /* subtle — tweak to taste */
+    pointer-events: none;
+    z-index: 0;
+    border-radius: var(--radius-lg); /* matches article's own radius */
 }
 
 /* Acoridon Logic */
