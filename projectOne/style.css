@@ -715,6 +715,8 @@ aside.profile > .container > a:hover {
 .page-footer {
     text-align: center;
     padding-block: var(--space-xl) var(--space-lg);
+    /* padding block = top and bottom */
+    /* youre welcome to whoever reviews this later*/
     font-size: 0.82rem;
     color: var(--text-muted);
     border-top: 1px solid rgba(255,255,255,0.06);
@@ -812,18 +814,4 @@ a:hover {cursor: url('Link.png') 4 4, pointer;}
 
 @media (max-width: 420px) {
     .features { grid-template-columns: 1fr; }
-}
-
-/* trying to apply a background to the footer as per googles guidance with main before but its a bit tricky. either that or the movie fatherhood is distracting me*/
-.page-footer{position: relative;}
-
-footer::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('8a79ae60c65c025c65d1e9a70fdacd95.jpg') repeat;
-    background-size: auto;
-    opacity: 0.08;
-    pointer-events: none;
-    z-index: 0;
 }
