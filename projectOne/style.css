@@ -908,3 +908,18 @@ a:hover {
         margin: var(--space-lg);
     }
 }
+
+/* Demo for Gillian. Not worth it dude. cool add for my bash scripts and anything that looks like a cli but not here man.
+header::after {
+    content: "\255A\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550\2550";
+    display: block;
+    position: absolute;
+    top: 293px;
+    left: -42px;
+    margin: 0 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 50px;
+    color: var(--accent-yellow);
+}
+*/
