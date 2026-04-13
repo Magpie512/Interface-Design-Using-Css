@@ -869,7 +869,7 @@ a:hover {
     }
 
     nav::before {
-        content: '☰';
+        content: '☰'; /* Accidentally erased the link. I unironically had people on REPO help me with this.*/ 
         display: block;
         position: absolute;
         top: 0.5rem;
