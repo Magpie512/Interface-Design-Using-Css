@@ -864,6 +864,27 @@ a:hover {
         padding: 8vh 0 6vh;
     }
 
+    nav::before {
+        display: none;
+        content:'☰';/*https://www.fileformat.info/info/unicode/char/2630/index.htm*/
+        display: block;
+        position: absolute;
+        top: 0 rem;
+        right: 1rem;
+        z-index: 301;
+        background: var(--surface-glass);
+        backdrop-filter: blur(14px) saturate(1.4);
+        -webkit-backdrop-filter: blur(14px) saturate(1.4);
+        border: 1px solid var(--gold-dark);
+        border-radius: var(--radius-sm);
+        padding: 0.6rem 0.9rem;
+        font-size: 1.5rem;
+        color: var(--gold-mid);
+        cursor: url('Link.png') 4 4, pointer;
+        transition: all var(--trans-fast);
+        pointer-events: auto;
+    }
+
     nav a {
         font-size: 0.72rem;
         padding: 0.75rem 0.65rem;
