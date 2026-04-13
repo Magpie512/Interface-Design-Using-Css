@@ -864,12 +864,15 @@ a:hover {
         padding: 8vh 0 6vh;
     }
 
+    nav {
+        position: relative;
+    }
+
     nav::before {
-        display: none;
-        content:'☰';/*https://www.fileformat.info/info/unicode/char/2630/index.htm*/
+        content: '☰';
         display: block;
         position: absolute;
-        top: 0 rem;
+        top: 0.5rem;
         right: 1rem;
         z-index: 301;
         background: var(--surface-glass);
@@ -883,6 +886,18 @@ a:hover {
         cursor: url('Link.png') 4 4, pointer;
         transition: all var(--trans-fast);
         pointer-events: auto;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav:focus-within ul,
+    nav ul:focus-within,
+    nav ul:hover,
+    nav:hover ul {
+        display: flex;
     }
 
     nav a {
