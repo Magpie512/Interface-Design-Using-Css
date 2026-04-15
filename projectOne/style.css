@@ -906,6 +906,11 @@ a:hover {
         letter-spacing: 0.07em;
     }
 
+    /* ill fix this later maybe. for me. as a treat */
+    article[id] {
+    scroll-margin-top: var(10rem);
+    }
+
     aside,
     main article {
         padding: var(--space-md) var(--space-sm);
