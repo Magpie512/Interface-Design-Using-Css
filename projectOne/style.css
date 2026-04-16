@@ -908,7 +908,7 @@ a:hover {
 
     /* ill fix this later maybe. for me. as a treat */
     article[id] {
-    scroll-margin-top: var(10rem);
+    scroll-margin-top: 10rem; /* bruh */
     }
 
     aside,
